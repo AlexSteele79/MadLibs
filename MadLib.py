@@ -34,4 +34,3 @@ class MadLib:
     def show_complete_madlib(self):
         tuple_list = tuple(self.word_list)
         print(self.madlib_story % tuple_list)
-
