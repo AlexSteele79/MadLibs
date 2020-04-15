@@ -34,3 +34,7 @@ class MadLib:
     def show_complete_madlib(self):
         tuple_list = tuple(self.word_list)
         print(self.madlib_story % tuple_list)
+
+    def replace_proper_nouns(self, pnoun):
+        for index in self.word_locations[pnoun]:
+            self.word_tag_list[index][0] = "{}"
