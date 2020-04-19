@@ -6,6 +6,7 @@ class Pipeline:
     madlib = None
     tokenized_text = None
     word_list = None
+
     word_locations = {}
 
     def __init__(self, madlib):
@@ -15,11 +16,9 @@ class Pipeline:
         self.replace_proper_nouns("George")
         print(self.word_tag_list)
 
-
     def tokenization(self):
         return self.nlp(self.madlib)
 
-    # Creates the object [ [Word, Tag, Tag_], [Word, Tag, Tag_] ]
     def generate_word_tag_list(self):
         return_list = []
         index = 0
@@ -43,16 +42,3 @@ class Pipeline:
     def replace_proper_nouns(self, pnoun):
         for index in self.word_locations[pnoun]:
             self.word_tag_list[index][0] = "{}"
-
-        def show_tags(self):
-            print("Word\tLemma\tTag\tTagW")
-            print("____\t_____\t___\t____")
-            for token in self.tokenized_text:
-
-<<<<<<< Updated upstream
-                print("{}\t{}\t{}\t{}".format(token.text, token.lemma_,
-                token.tag, token.tag_))
-=======
-if __name__ == "__main__":
-    newt = Pipeline("George was a happy King. George was also the only King.")
->>>>>>> Stashed changes
