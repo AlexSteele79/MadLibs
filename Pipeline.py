@@ -1,20 +1,19 @@
 import spacy
 
+
 class Pipeline:
     nlp = spacy.load('en')
-    word_locations = {}
+
     madlib = None
     tokenized_text = None
-    tagged_text = None
     word_tag_list = None
+    word_locations = {}
+
 
     def __init__(self, madlib):
         self.madlib = madlib
         self.tokenized_text = self.tokenization()
         self.word_tag_list = self.generate_word_tag_list()
-        self.replace_proper_nouns("George")
-        print(self.word_tag_list)
-
 
     def tokenization(self):
         return self.nlp(self.madlib)
@@ -39,15 +38,3 @@ class Pipeline:
             index += 1
 
         return return_list
-
-    def replace_proper_nouns(self, pnoun):
-        for index in self.word_locations[pnoun]:
-            self.word_tag_list[index][0] = "{}"
-
-        def show_tags(self):
-            print("Word\tLemma\tTag\tTagW")
-            print("____\t_____\t___\t____")
-            for token in self.tokenized_text:
-
-                print("{}\t{}\t{}\t{}".format(token.text, token.lemma_,
-                token.tag, token.tag_))

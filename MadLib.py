@@ -1,6 +1,5 @@
 from madlib_stories import stories
 from Pipeline import Pipeline
-from Story import Story
 
 import random
 import spacy
