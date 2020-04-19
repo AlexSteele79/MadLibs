@@ -9,7 +9,6 @@ class Pipeline:
     word_tag_list = None
     word_locations = {}
 
-
     def __init__(self, madlib):
         self.madlib = madlib
         self.tokenized_text = self.tokenization()
@@ -38,3 +37,7 @@ class Pipeline:
             index += 1
 
         return return_list
+
+
+if __name__ == "__main__":
+    newt = Pipeline("George was a happy King. George was also the only King.")
