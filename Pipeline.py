@@ -1,5 +1,6 @@
 import spacy
 
+
 class Pipeline:
     nlp = spacy.load('en')
 
@@ -8,12 +9,10 @@ class Pipeline:
     word_tag_list = None
     word_locations = {}
 
-
     def __init__(self, madlib):
         self.madlib = madlib
         self.tokenized_text = self.tokenization()
         self.word_tag_list = self.generate_word_tag_list()
-
 
     def tokenization(self):
         return self.nlp(self.madlib)

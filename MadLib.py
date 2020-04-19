@@ -1,7 +1,7 @@
 from madlib_stories import stories
+
 import random
 import re
-import os
 
 
 class MadLib:
