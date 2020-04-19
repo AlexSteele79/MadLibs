@@ -9,6 +9,7 @@ class Pipeline:
     word_tag_list = None
     word_locations = {}
 
+
     def __init__(self, madlib):
         self.madlib = madlib
         self.tokenized_text = self.tokenization()
