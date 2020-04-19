@@ -5,8 +5,13 @@ class Pipeline:
     word_locations = {}
     madlib = None
     tokenized_text = None
+<<<<<<< Updated upstream
     tagged_text = None
     word_tag_list = None
+=======
+    word_list = None
+    word_locations = {}
+>>>>>>> Stashed changes
 
     def __init__(self, madlib):
         self.madlib = madlib
@@ -49,5 +54,10 @@ class Pipeline:
             print("____\t_____\t___\t____")
             for token in self.tokenized_text:
 
+<<<<<<< Updated upstream
                 print("{}\t{}\t{}\t{}".format(token.text, token.lemma_,
                 token.tag, token.tag_))
+=======
+if __name__ == "__main__":
+    newt = Pipeline("George was a happy King. George was also the only King.")
+>>>>>>> Stashed changes
